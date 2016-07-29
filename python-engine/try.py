@@ -5,9 +5,7 @@ import os
 import random
 from collections import Counter
 from nltk import word_tokenize, WordNetLemmatizer
-from nltk.corpus import stopwords
 from nltk import NaiveBayesClassifier, classify
-stoplist = stopwords.words('english')
 
 def init_lists(file):
     with open(file) as f:
@@ -19,7 +17,7 @@ def preprocess(sentence):
 def get_features(text, setting):
     if setting=='bow':
         return {word: count for word, count in Counter(preprocess(text)).items()}
-    else: return {word: True for word in preprocess(text) if not word in stoplist}
+    else: return {word: True for word in preprocess(text)}
 def train(features, samples_proportion):
     train_size = int(len(features) * samples_proportion)
     # initialise the training and test sets
