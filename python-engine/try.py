@@ -1,6 +1,6 @@
 from __future__ import print_function, division
 import nltk
-nltk.download()
+
 import os
 import random
 from collections import Counter
@@ -54,4 +54,6 @@ train_set, test_set, classifier = train(all_features, 0.8)
 # evaluate its performance
 evaluate(train_set, test_set, classifier)
 
-print (classifier.classify(get_features("Here's what happens when three senators disagree on gun policy", "bow")))
+def vardy(something):
+    return (classifier.classify(get_features(something, "bow")))
+
