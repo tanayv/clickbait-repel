@@ -1,12 +1,14 @@
-# Clickbait Repel
+Clickbait Repel
+===============
 
-**clickbait**
->content, especially that of a sensational or provocative nature, 
->whose main purpose is to attract attention and draw visitors to a
->particular web page.
+A Flask application (so far) to classify and flag "clickbait" headlines. 
 
 
-To run the Python engine for the first time: 
-``
-nltk.download()
-``
+#### Clickbait
+
+> Article headlines, links and other media on the internet that present little to no legitimate information and instead rely on sensationalism to rake in ad revenue. 
+
+
+#### Link to Missing Files: 
+- (Folder) runs 
+- (Folder) env
